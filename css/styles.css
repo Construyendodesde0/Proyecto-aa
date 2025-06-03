@@ -28,6 +28,7 @@ h1, h2, h3 {
     font-weight: 600;
 }
 
+
 .has-tooltip {
     position: relative;
 }
@@ -66,79 +67,6 @@ h1, h2, h3 {
     line-height: 1.4;
 }
 
-/* Para móviles */
-@media (max-width: 768px) {
-    .service-tooltip {
-        left: 50%;
-        top: 100%;
-        width: 200px;
-        transform: translateX(-50%) translateY(10px);
-    }
-    
-    .has-tooltip:hover .service-tooltip {
-        transform: translateX(-50%) translateY(0);
-    }
-}
-
-
-/* --- Botón de traducción --- */
-.translate-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-}
-
-.translate-btn button {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    color: var(--black);
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.translate-btn button:hover {
-    color: var(--soft-pink);
-}
-
-.translate-menu {
-    position: absolute;
-    top: 40px;
-    right: 0;
-    background-color: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 10px 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    z-index: 100;
-}
-
-.translate-btn:hover .translate-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-.translate-menu li {
-    padding: 10px 20px;
-}
-
-.translate-menu li a {
-    text-decoration: none;
-    color: var(--black);
-    transition: color 0.3s;
-}
-
-.translate-menu li a:hover {
-    color: var(--soft-pink);
-}
-
-
 /* --- Header --- */
 header {
     background: linear-gradient(to right, var(--white) 0%, rgba(248, 244, 242, 0.9) 100%);
@@ -158,7 +86,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 5rem;
     margin-bottom: 15px;
     color: var(--black);
 }
@@ -198,9 +126,9 @@ nav a:hover::after {
 
 /* --- Servicios --- */
 .services-section {
-    padding: 80px 20px 60px;
+    padding: 40px 20px 60px;
     text-align: center;
-    background: linear-gradient(to bottom, rgba(248, 244, 242, 0.98) 0%, rgba(232, 196, 196, 0.1) 100%);
+    background:linear-gradient(to bottom, rgba(248, 244, 242, 0.98) 0%, rgba(232, 196, 196, 0.1) 100%);
 }
 
 .services-section h2 {
@@ -575,53 +503,10 @@ nav a:hover::after {
     margin-right: 5px;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-    header {
-        padding: 15px 0;
-    }
-    
-    nav {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-    
-    .services-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .service-card {
-        width: 100%;
-        max-width: 350px;
-    }
-    
-    .tab-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .tab-btn {
-        width: 100%;
-        max-width: 200px;
-        margin-bottom: 10px;
-    }
-    
-    .tab-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-content h2 {
-        font-size: 2rem;
-    }
-}
-
-
-
 /* --- Menú desplegable --- */
 .main-menu {
     display: flex;
+    align-items: center;
     list-style: none;
     gap: 25px;
 }
@@ -821,4 +706,56 @@ nav a:hover::after {
 .modal-overlay.active {
     z-index: 1001;
     display: flex;
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .service-tooltip {
+        left: 50%;
+        top: 100%;
+        width: 200px;
+        transform: translateX(-50%) translateY(10px);
+    }
+    
+    .has-tooltip:hover .service-tooltip {
+        transform: translateX(-50%) translateY(0);
+    }
+    header {
+        padding: 15px 0;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .tab-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        max-width: 200px;
+        margin-bottom: 10px;
+    }
+    
+    .tab-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
 }
